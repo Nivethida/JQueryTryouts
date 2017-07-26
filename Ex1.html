@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<style>
+    table{
+        margin: 2px;
+        padding: 10px;
+        border: 2px black solid;
+        background-color: aquamarine;
+    }
+    #div2{
+        background-color: aliceblue;
+        display: inline-block;
+       float: left;
+        margin: 2px;
+    }
+    #div1{
+        display: inline-block;
+        float: left;
+    }
+    #but1{
+        display: block;
+    }
+</style>
+<body>
+<script>
+$(document).ready(function () {
+    $("#but1").click(function () {
+        var txt1="";
+        txt1 +="width" + $(document).width();
+        txt1 +="height" + $(window).height();
+        $("body").append("<p></p>").html(txt1);
+    });
+});
+</script>
+<div>
+<div id="div1">
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Joey</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jones</td>
+        </tr>
+    </table>
+</div>
+    <div id="div2">
+        <p>hi there</p>
+    </div>
+</div>
+<button id="but1" value="click">Click me</button>
+</body>
+</html>
